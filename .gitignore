@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.local
+.env.*.local
+.envrc
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+
+# Node
+node_modules/
+.next/
+out/
+.expo/
+.expo-shared/
+.expo/web-build/
+yarn-error.log*
+pnpm-debug.log*
+npm-debug.log*
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+**/docker-data/

@@ -32,6 +32,12 @@ class Settings(BaseSettings):
     minio_bucket: str = Field(default="app-bucket", alias="MINIO_BUCKET")
     minio_region: str = Field(default="us-east-1", alias="MINIO_REGION")
 
+    openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
+    openai_model: str = Field(default="gpt-4o-mini", alias="OPENAI_MODEL")
+    openai_embedding_model: str = Field(default="text-embedding-3-small", alias="OPENAI_EMBEDDING_MODEL")
+    openai_max_retries: int = Field(default=3, alias="OPENAI_MAX_RETRIES")
+    openai_timeout: int = Field(default=60, alias="OPENAI_TIMEOUT")
+
     @property
     def database_url(self) -> str:
         """Return the SQLAlchemy async connection URL."""

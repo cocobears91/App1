@@ -1,0 +1,27 @@
+{
+  "name": "monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/mobile"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev:web": "npm run dev --workspace @acme/web",
+    "build:web": "npm run build --workspace @acme/web",
+    "lint:web": "npm run lint --workspace @acme/web",
+    "test:web": "npm run test --workspace @acme/web",
+    "dev:mobile": "npm run start --workspace @acme/mobile",
+    "lint:mobile": "npm run lint --workspace @acme/mobile",
+    "format:web": "npm run format --workspace @acme/web",
+    "format:mobile": "npm run format --workspace @acme/mobile",
+    "format": "npm run format:web && npm run format:mobile",
+    "lint": "npm run lint:web && npm run lint:mobile"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

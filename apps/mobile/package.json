@@ -1,0 +1,31 @@
+{
+  "name": "@acme/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "dependencies": {
+    "expo": "~51.0.7",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@types/react": "18.2.47",
+    "@types/react-native": "0.73.0",
+    "babel-preset-expo": "^9.7.2",
+    "eslint": "8.57.0",
+    "@typescript-eslint/eslint-plugin": "7.16.1",
+    "@typescript-eslint/parser": "7.16.1",
+    "typescript": "5.5.4"
+  }
+}

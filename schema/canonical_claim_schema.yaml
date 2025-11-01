@@ -1,0 +1,188 @@
+# Canonical schema for senior-care billing claims
+
+ClaimBatch:
+  type: object
+  required:
+    - batch_id
+    - ingestion_ts
+    - claims
+  properties:
+    batch_id:
+      type: string
+      description: Unique identifier assigned at ingestion time.
+    ingestion_ts:
+      type: string
+      format: date-time
+    source_system:
+      type: string
+      description: Originating system or payer feed.
+    facility_type:
+      type: string
+      enum:
+        - SNF
+        - HomeHealth
+        - AssistedLiving
+        - Hospice
+        - Other
+    claims:
+      type: array
+      items:
+        $ref: '#/Claim'
+
+Claim:
+  type: object
+  required:
+    - claim_id
+    - header
+    - patient
+    - lines
+  properties:
+    claim_id:
+      type: string
+    payer:
+      type: string
+    coverage_type:
+      type: string
+      enum: [MedicareA, MedicareB, MedicareAdvantage, Medicaid, Commercial]
+    submission_ts:
+      type: string
+      format: date-time
+    header:
+      $ref: '#/ClaimHeader'
+    patient:
+      $ref: '#/PatientContext'
+    lines:
+      type: array
+      items:
+        $ref: '#/ClaimLine'
+    documents:
+      type: array
+      items:
+        $ref: '#/DocumentReference'
+    metadata:
+      type: object
+      additionalProperties: true
+
+ClaimHeader:
+  type: object
+  required: [facility_npi, attending_npi, service_from, service_to, place_of_service]
+  properties:
+    facility_npi:
+      type: string
+    attending_npi:
+      type: string
+    rendering_npi:
+      type: string
+    billed_amount:
+      type: number
+      format: float
+    expected_reimbursement:
+      type: number
+      format: float
+    admission_type:
+      type: string
+    discharge_status:
+      type: string
+    service_from:
+      type: string
+      format: date
+    service_to:
+      type: string
+      format: date
+    place_of_service:
+      type: string
+    diagnosis_codes:
+      type: array
+      items:
+        type: string
+    value_codes:
+      type: array
+      items:
+        type: string
+    occurrence_codes:
+      type: array
+      items:
+        type: string
+
+ClaimLine:
+  type: object
+  required: [line_number, hcpcs_cpt, revenue_code, units, billed_amount]
+  properties:
+    line_number:
+      type: integer
+    hcpcs_cpt:
+      type: string
+    icd10_pcs:
+      type: string
+    modifiers:
+      type: array
+      items:
+        type: string
+    revenue_code:
+      type: string
+    service_date:
+      type: string
+      format: date
+    units:
+      type: number
+    billed_amount:
+      type: number
+    rendering_npi:
+      type: string
+    diagnosis_pointers:
+      type: array
+      items:
+        type: integer
+    notes_ref:
+      type: array
+      items:
+        type: string
+        description: IDs referencing DocumentReference entries.
+
+PatientContext:
+  type: object
+  required: [patient_id, dob, gender]
+  properties:
+    patient_id:
+      type: string
+    dob:
+      type: string
+      format: date
+    gender:
+      type: string
+    dual_eligible:
+      type: boolean
+    hospice_election:
+      type: boolean
+    risk_scores:
+      type: object
+      properties:
+        hcc:
+          type: number
+        pdpm:
+          type: object
+          additionalProperties: number
+        frailty_index:
+          type: number
+    chronic_conditions:
+      type: array
+      items:
+        type: string
+
+DocumentReference:
+  type: object
+  required: [document_id, document_type]
+  properties:
+    document_id:
+      type: string
+    document_type:
+      type: string
+      enum: [OASIS, MDS, PlanOfCare, ProgressNote, PhysicianOrder, LabResult, Other]
+    source_uri:
+      type: string
+    signed_ts:
+      type: string
+      format: date-time
+    attestation:
+      type: string
+

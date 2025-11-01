@@ -1,0 +1,1045 @@
+Processing yc_before_growing (Before growing your startup)
+Processing yc_essential_advice (YC's essential startup advice)
+Processing yc_later_stage (Later stage advice for startups)
+Processing yc_navigating_success (Navigating success for your startup)
+Processing a16z_acquihires (The Complete Guide to Acquihires)
+Processing a16z_hustlin_tech (Introducing Hustlin Tech: Our guides to technology for hustlers)
+Processing a16z_exit_options (IPOs and Beyond: A guide to exit options for companies)
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 0.441062 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 0.855964 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 1.780264 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 3.363655 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 7.702378 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 6.410866 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 6.030843 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 6.290975 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 6.381424 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+INFO Retrying request to /embeddings in 6.461374 seconds
+INFO HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /workspace/src/primer_agent/ingest.py:78 in main                             │
+│                                                                              │
+│    75 │                                                                      │
+│    76 │   VECTORSTORE_DIR.mkdir(parents=True, exist_ok=True)                 │
+│    77 │                                                                      │
+│ ❱  78 │   vector_store = _vector_store_with_backoff(documents, embeddings)   │
+│    79 │   vector_store.save_local(str(VECTORSTORE_DIR))                      │
+│    80 │                                                                      │
+│    81 │   _write_manifest(specs, chunk_size=chunk_size, chunk_overlap=chunk_ │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ chunk_overlap = 150                                                      │ │
+│ │    chunk_size = 1200                                                     │ │
+│ │          docs = [                                                        │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Exit options for startups, and     │ │
+│ │                 their investors, were relatively straightforward '+885   │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='How it works:\nIn an IPO, a        │ │
+│ │                 company picks an underwriter, or an investment bank,     │ │
+│ │                 '+1015                                                   │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='How it’s trending:\nWe’ve been in  │ │
+│ │                 a period of (relatively) fewer IPOs, due to a d'+756     │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='backlog\nof $1 billion-plus        │ │
+│ │                 private companies; there are currently 700+ unicorns     │ │
+│ │                 '+947                                                    │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='pop\n”. Hot deals also tend to     │ │
+│ │                 attract significant interest from retail investors'+760  │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='What it means for startups,        │ │
+│ │                 founders, and investors:\nIn a hot tech IPO market       │ │
+│ │                 wh'+1105                                                 │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Source: Cap IQ\n]\nThe takeaway\n: │ │
+│ │                 IPOs will continue to be an attractive option, e'+346    │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='How it works:\nGoing public via a  │ │
+│ │                 SPAC involves a two-step process in which the S'+972     │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Unlike a pure M&A (typically a     │ │
+│ │                 full exit for existing investors), or a tradition'+826   │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'a16z_exit_options',            │ │
+│ │                 │   │   │   'title': 'IPOs and Beyond: A guide to exit   │ │
+│ │                 options for companies',                                  │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://a16z.com/ipos-and-beyond-a-guide-to-exit-optio… │ │
+│ │                 │   │   │   'organization': 'a16z',                      │ │
+│ │                 │   │   │   'tags': ['finance', 'exits']                 │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Source: Morgan Stanley ECM and     │ │
+│ │                 LionTree Weekly SPAC Dashboard\n]\nThe timing of a '+883 │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   ... +23                                              │ │
+│ │                 ]                                                        │ │
+│ │     documents = [                                                        │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_before_growing',            │ │
+│ │                 │   │   │   'title': 'Before growing your startup',      │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4p-before-growing-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['product', 'growth']                │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='[Startups are defined by           │ │
+│ │                 growth](http://www.paulgraham.com/growth.html), but      │ │
+│ │                 gro'+958                                                 │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_before_growing',            │ │
+│ │                 │   │   │   'title': 'Before growing your startup',      │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4p-before-growing-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['product', 'growth']                │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Facebook, for example, had a       │ │
+│ │                 product people talked about obsessively from the st'+988 │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_before_growing',            │ │
+│ │                 │   │   │   'title': 'Before growing your startup',      │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4p-before-growing-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['product', 'growth']                │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content="And if you're just starting out,   │ │
+│ │                 take the time to build a product your users lov"+214     │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='A lot of the advice we give        │ │
+│ │                 startups is tactical; meant to be helpful on a day       │ │
+│ │                 t'+803                                                   │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Once launched, we suggest founders │ │
+│ │                 do things that don’t scale ([Do Things That D'+1115      │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Talking to users usually yields a  │ │
+│ │                 long, complicated list of features to build. O'+459      │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='As companies begin to grow there   │ │
+│ │                 are often tons of potential distractions. Confe'+1065    │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='be many times where founders are   │ │
+│ │                 forced to choose between multiple directions fo'+406     │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='When it comes to customers most    │ │
+│ │                 founders don’t realize that they get to choose c'+812    │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   Document(                                            │ │
+│ │                 │   │   metadata={                                       │ │
+│ │                 │   │   │   'source_id': 'yc_essential_advice',          │ │
+│ │                 │   │   │   'title': "YC's essential startup advice",    │ │
+│ │                 │   │   │   'url':                                       │ │
+│ │                 'https://www.ycombinator.com/library/4D-yc-s-essential-… │ │
+│ │                 │   │   │   'organization': 'yc',                        │ │
+│ │                 │   │   │   'tags': ['founder', 'strategy']              │ │
+│ │                 │   │   },                                               │ │
+│ │                 │   │   page_content='Growth is always a focus for       │ │
+│ │                 startups, since a startup without growth is              │ │
+│ │                 usually'+1058                                            │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   ... +92                                              │ │
+│ │                 ]                                                        │ │
+│ │    embeddings = OpenAIEmbeddings(                                        │ │
+│ │                 │   client=<openai.resources.embeddings.Embeddings       │ │
+│ │                 object at 0x7fa46f2912e0>,                               │ │
+│ │                 │                                                        │ │
+│ │                 async_client=<openai.resources.embeddings.AsyncEmbeddin… │ │
+│ │                 object at 0x7fa46eab6420>,                               │ │
+│ │                 │   model='text-embedding-3-small',                      │ │
+│ │                 │   dimensions=None,                                     │ │
+│ │                 │   deployment='text-embedding-ada-002',                 │ │
+│ │                 │   openai_api_version=None,                             │ │
+│ │                 │   openai_api_base=None,                                │ │
+│ │                 │   openai_api_type=None,                                │ │
+│ │                 │   openai_proxy=None,                                   │ │
+│ │                 │   embedding_ctx_length=8191,                           │ │
+│ │                 │   openai_api_key=SecretStr('**********'),              │ │
+│ │                 │   openai_organization=None,                            │ │
+│ │                 │   allowed_special=None,                                │ │
+│ │                 │   disallowed_special=None,                             │ │
+│ │                 │   chunk_size=1000,                                     │ │
+│ │                 │   max_retries=10,                                      │ │
+│ │                 │   request_timeout=60.0,                                │ │
+│ │                 │   headers=None,                                        │ │
+│ │                 │   tiktoken_enabled=True,                               │ │
+│ │                 │   tiktoken_model_name=None,                            │ │
+│ │                 │   show_progress_bar=False,                             │ │
+│ │                 │   model_kwargs={},                                     │ │
+│ │                 │   skip_empty=False,                                    │ │
+│ │                 │   default_headers=None,                                │ │
+│ │                 │   default_query=None,                                  │ │
+│ │                 │   retry_min_seconds=4,                                 │ │
+│ │                 │   retry_max_seconds=20,                                │ │
+│ │                 │   http_client=None,                                    │ │
+│ │                 │   http_async_client=None,                              │ │
+│ │                 │   check_embedding_ctx_length=True                      │ │
+│ │                 )                                                        │ │
+│ │       refresh = False                                                    │ │
+│ │     source_id = None                                                     │ │
+│ │          spec = SourceSpec(                                              │ │
+│ │                 │   id='a16z_exit_options',                              │ │
+│ │                 │   organization='a16z',                                 │ │
+│ │                 │   title='IPOs and Beyond: A guide to exit options for  │ │
+│ │                 companies',                                              │ │
+│ │                 │                                                        │ │
+│ │                 url='https://a16z.com/ipos-and-beyond-a-guide-to-exit-o… │ │
+│ │                 │   parser='a16z_wp',                                    │ │
+│ │                 │   tags=('finance', 'exits')                            │ │
+│ │                 )                                                        │ │
+│ │         specs = [                                                        │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='yc_before_growing',                          │ │
+│ │                 │   │   organization='yc',                               │ │
+│ │                 │   │   title='Before growing your startup',             │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://www.ycombinator.com/library/4p-before-grow… │ │
+│ │                 │   │   parser='yc_library',                             │ │
+│ │                 │   │   tags=('product', 'growth')                       │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='yc_essential_advice',                        │ │
+│ │                 │   │   organization='yc',                               │ │
+│ │                 │   │   title="YC's essential startup advice",           │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://www.ycombinator.com/library/4D-yc-s-essent… │ │
+│ │                 │   │   parser='yc_library',                             │ │
+│ │                 │   │   tags=('founder', 'strategy')                     │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='yc_later_stage',                             │ │
+│ │                 │   │   organization='yc',                               │ │
+│ │                 │   │   title='Later stage advice for startups',         │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://www.ycombinator.com/library/4q-later-stage… │ │
+│ │                 │   │   parser='yc_library',                             │ │
+│ │                 │   │   tags=('scaling', 'operations')                   │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='yc_navigating_success',                      │ │
+│ │                 │   │   organization='yc',                               │ │
+│ │                 │   │   title='Navigating success for your startup',     │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://www.ycombinator.com/library/4s-navigating-… │ │
+│ │                 │   │   parser='yc_library',                             │ │
+│ │                 │   │   tags=('strategy', 'fundraising')                 │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='a16z_acquihires',                            │ │
+│ │                 │   │   organization='a16z',                             │ │
+│ │                 │   │   title='The Complete Guide to Acquihires',        │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://a16z.com/the-complete-guide-to-acquihires/… │ │
+│ │                 │   │   parser='a16z_wp',                                │ │
+│ │                 │   │   tags=('talent', 'm_and_a')                       │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='a16z_hustlin_tech',                          │ │
+│ │                 │   │   organization='a16z',                             │ │
+│ │                 │   │   title='Introducing Hustlin Tech: Our guides to   │ │
+│ │                 technology for hustlers',                                │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://a16z.com/introducing-hustlin-tech-our-guid… │ │
+│ │                 │   │   parser='a16z_wp',                                │ │
+│ │                 │   │   tags=('go_to_market', 'community')               │ │
+│ │                 │   ),                                                   │ │
+│ │                 │   SourceSpec(                                          │ │
+│ │                 │   │   id='a16z_exit_options',                          │ │
+│ │                 │   │   organization='a16z',                             │ │
+│ │                 │   │   title='IPOs and Beyond: A guide to exit options  │ │
+│ │                 for companies',                                          │ │
+│ │                 │   │                                                    │ │
+│ │                 url='https://a16z.com/ipos-and-beyond-a-guide-to-exit-o… │ │
+│ │                 │   │   parser='a16z_wp',                                │ │
+│ │                 │   │   tags=('finance', 'exits')                        │ │
+│ │                 │   )                                                    │ │
+│ │                 ]                                                        │ │
+│ │          text = 'Exit options for startups, and their investors, were    │ │
+│ │                 relatively straightforward '+29488                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /workspace/src/primer_agent/ingest.py:203 in _vector_store_with_backoff      │
+│                                                                              │
+│   200 def _vector_store_with_backoff(documents: Sequence[Document], embeddin │
+│   201 │   iterator = iter(documents)                                         │
+│   202 │   first = next(iterator)                                             │
+│ ❱ 203 │   store = FAISS.from_texts(                                          │
+│   204 │   │   [first.page_content],                                          │
+│   205 │   │   embeddings,                                                    │
+│   206 │   │   metadatas=[first.metadata],                                    │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │  documents = [                                                           │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_before_growing',               │ │
+│ │              │   │   │   'title': 'Before growing your startup',         │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4p-before-growing-you… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['product', 'growth']                   │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='[Startups are defined by              │ │
+│ │              growth](http://www.paulgraham.com/growth.html), but         │ │
+│ │              gro'+958                                                    │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_before_growing',               │ │
+│ │              │   │   │   'title': 'Before growing your startup',         │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4p-before-growing-you… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['product', 'growth']                   │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='Facebook, for example, had a product  │ │
+│ │              people talked about obsessively from the st'+988            │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_before_growing',               │ │
+│ │              │   │   │   'title': 'Before growing your startup',         │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4p-before-growing-you… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['product', 'growth']                   │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content="And if you're just starting out, take │ │
+│ │              the time to build a product your users lov"+214             │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='A lot of the advice we give startups  │ │
+│ │              is tactical; meant to be helpful on a day t'+803            │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='Once launched, we suggest founders do │ │
+│ │              things that don’t scale ([Do Things That D'+1115            │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='Talking to users usually yields a     │ │
+│ │              long, complicated list of features to build. O'+459         │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='As companies begin to grow there are  │ │
+│ │              often tons of potential distractions. Confe'+1065           │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='be many times where founders are      │ │
+│ │              forced to choose between multiple directions fo'+406        │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='When it comes to customers most       │ │
+│ │              founders don’t realize that they get to choose c'+812       │ │
+│ │              │   ),                                                      │ │
+│ │              │   Document(                                               │ │
+│ │              │   │   metadata={                                          │ │
+│ │              │   │   │   'source_id': 'yc_essential_advice',             │ │
+│ │              │   │   │   'title': "YC's essential startup advice",       │ │
+│ │              │   │   │   'url':                                          │ │
+│ │              'https://www.ycombinator.com/library/4D-yc-s-essential-sta… │ │
+│ │              │   │   │   'organization': 'yc',                           │ │
+│ │              │   │   │   'tags': ['founder', 'strategy']                 │ │
+│ │              │   │   },                                                  │ │
+│ │              │   │   page_content='Growth is always a focus for          │ │
+│ │              startups, since a startup without growth is usually'+1058   │ │
+│ │              │   ),                                                      │ │
+│ │              │   ... +92                                                 │ │
+│ │              ]                                                           │ │
+│ │ embeddings = OpenAIEmbeddings(                                           │ │
+│ │              │   client=<openai.resources.embeddings.Embeddings object   │ │
+│ │              at 0x7fa46f2912e0>,                                         │ │
+│ │              │                                                           │ │
+│ │              async_client=<openai.resources.embeddings.AsyncEmbeddings   │ │
+│ │              object at 0x7fa46eab6420>,                                  │ │
+│ │              │   model='text-embedding-3-small',                         │ │
+│ │              │   dimensions=None,                                        │ │
+│ │              │   deployment='text-embedding-ada-002',                    │ │
+│ │              │   openai_api_version=None,                                │ │
+│ │              │   openai_api_base=None,                                   │ │
+│ │              │   openai_api_type=None,                                   │ │
+│ │              │   openai_proxy=None,                                      │ │
+│ │              │   embedding_ctx_length=8191,                              │ │
+│ │              │   openai_api_key=SecretStr('**********'),                 │ │
+│ │              │   openai_organization=None,                               │ │
+│ │              │   allowed_special=None,                                   │ │
+│ │              │   disallowed_special=None,                                │ │
+│ │              │   chunk_size=1000,                                        │ │
+│ │              │   max_retries=10,                                         │ │
+│ │              │   request_timeout=60.0,                                   │ │
+│ │              │   headers=None,                                           │ │
+│ │              │   tiktoken_enabled=True,                                  │ │
+│ │              │   tiktoken_model_name=None,                               │ │
+│ │              │   show_progress_bar=False,                                │ │
+│ │              │   model_kwargs={},                                        │ │
+│ │              │   skip_empty=False,                                       │ │
+│ │              │   default_headers=None,                                   │ │
+│ │              │   default_query=None,                                     │ │
+│ │              │   retry_min_seconds=4,                                    │ │
+│ │              │   retry_max_seconds=20,                                   │ │
+│ │              │   http_client=None,                                       │ │
+│ │              │   http_async_client=None,                                 │ │
+│ │              │   check_embedding_ctx_length=True                         │ │
+│ │              )                                                           │ │
+│ │      first = Document(                                                   │ │
+│ │              │   metadata={                                              │ │
+│ │              │   │   'source_id': 'yc_before_growing',                   │ │
+│ │              │   │   'title': 'Before growing your startup',             │ │
+│ │              │   │   'url':                                              │ │
+│ │              'https://www.ycombinator.com/library/4p-before-growing-you… │ │
+│ │              │   │   'organization': 'yc',                               │ │
+│ │              │   │   'tags': ['product', 'growth']                       │ │
+│ │              │   },                                                      │ │
+│ │              │   page_content='[Startups are defined by                  │ │
+│ │              growth](http://www.paulgraham.com/growth.html), but         │ │
+│ │              gro'+958                                                    │ │
+│ │              )                                                           │ │
+│ │   iterator = <list_iterator object at 0x7fa46ea7fa60>                    │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/langchain_community/vectors │
+│ tores/faiss.py:1043 in from_texts                                            │
+│                                                                              │
+│   1040 │   │   │   │   embeddings = OpenAIEmbeddings()                       │
+│   1041 │   │   │   │   faiss = FAISS.from_texts(texts, embeddings)           │
+│   1042 │   │   """                                                           │
+│ ❱ 1043 │   │   embeddings = embedding.embed_documents(texts)                 │
+│   1044 │   │   return cls.__from(                                            │
+│   1045 │   │   │   texts,                                                    │
+│   1046 │   │   │   embeddings,                                               │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ embedding = OpenAIEmbeddings(                                            │ │
+│ │             │   client=<openai.resources.embeddings.Embeddings object at │ │
+│ │             0x7fa46f2912e0>,                                             │ │
+│ │             │                                                            │ │
+│ │             async_client=<openai.resources.embeddings.AsyncEmbeddings    │ │
+│ │             object at 0x7fa46eab6420>,                                   │ │
+│ │             │   model='text-embedding-3-small',                          │ │
+│ │             │   dimensions=None,                                         │ │
+│ │             │   deployment='text-embedding-ada-002',                     │ │
+│ │             │   openai_api_version=None,                                 │ │
+│ │             │   openai_api_base=None,                                    │ │
+│ │             │   openai_api_type=None,                                    │ │
+│ │             │   openai_proxy=None,                                       │ │
+│ │             │   embedding_ctx_length=8191,                               │ │
+│ │             │   openai_api_key=SecretStr('**********'),                  │ │
+│ │             │   openai_organization=None,                                │ │
+│ │             │   allowed_special=None,                                    │ │
+│ │             │   disallowed_special=None,                                 │ │
+│ │             │   chunk_size=1000,                                         │ │
+│ │             │   max_retries=10,                                          │ │
+│ │             │   request_timeout=60.0,                                    │ │
+│ │             │   headers=None,                                            │ │
+│ │             │   tiktoken_enabled=True,                                   │ │
+│ │             │   tiktoken_model_name=None,                                │ │
+│ │             │   show_progress_bar=False,                                 │ │
+│ │             │   model_kwargs={},                                         │ │
+│ │             │   skip_empty=False,                                        │ │
+│ │             │   default_headers=None,                                    │ │
+│ │             │   default_query=None,                                      │ │
+│ │             │   retry_min_seconds=4,                                     │ │
+│ │             │   retry_max_seconds=20,                                    │ │
+│ │             │   http_client=None,                                        │ │
+│ │             │   http_async_client=None,                                  │ │
+│ │             │   check_embedding_ctx_length=True                          │ │
+│ │             )                                                            │ │
+│ │       ids = None                                                         │ │
+│ │    kwargs = {}                                                           │ │
+│ │ metadatas = [                                                            │ │
+│ │             │   {                                                        │ │
+│ │             │   │   'source_id': 'yc_before_growing',                    │ │
+│ │             │   │   'title': 'Before growing your startup',              │ │
+│ │             │   │   'url':                                               │ │
+│ │             'https://www.ycombinator.com/library/4p-before-growing-your… │ │
+│ │             │   │   'organization': 'yc',                                │ │
+│ │             │   │   'tags': ['product', 'growth']                        │ │
+│ │             │   }                                                        │ │
+│ │             ]                                                            │ │
+│ │     texts = [                                                            │ │
+│ │             │   '[Startups are defined by                                │ │
+│ │             growth](http://www.paulgraham.com/growth.html), but gro'+958 │ │
+│ │             ]                                                            │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/langchain_openai/embeddings │
+│ /base.py:625 in embed_documents                                              │
+│                                                                              │
+│   622 │   │   # NOTE: to keep things simple, we assume the list may contain  │
+│   623 │   │   #       than the maximum context and use length-safe embedding │
+│   624 │   │   engine = cast(str, self.deployment)                            │
+│ ❱ 625 │   │   return self._get_len_safe_embeddings(                          │
+│   626 │   │   │   texts, engine=engine, chunk_size=chunk_size, **kwargs      │
+│   627 │   │   )                                                              │
+│   628                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │    chunk_size = None                                                     │ │
+│ │   chunk_size_ = 1000                                                     │ │
+│ │ client_kwargs = {'model': 'text-embedding-3-small'}                      │ │
+│ │        engine = 'text-embedding-ada-002'                                 │ │
+│ │        kwargs = {}                                                       │ │
+│ │          self = OpenAIEmbeddings(                                        │ │
+│ │                 │   client=<openai.resources.embeddings.Embeddings       │ │
+│ │                 object at 0x7fa46f2912e0>,                               │ │
+│ │                 │                                                        │ │
+│ │                 async_client=<openai.resources.embeddings.AsyncEmbeddin… │ │
+│ │                 object at 0x7fa46eab6420>,                               │ │
+│ │                 │   model='text-embedding-3-small',                      │ │
+│ │                 │   dimensions=None,                                     │ │
+│ │                 │   deployment='text-embedding-ada-002',                 │ │
+│ │                 │   openai_api_version=None,                             │ │
+│ │                 │   openai_api_base=None,                                │ │
+│ │                 │   openai_api_type=None,                                │ │
+│ │                 │   openai_proxy=None,                                   │ │
+│ │                 │   embedding_ctx_length=8191,                           │ │
+│ │                 │   openai_api_key=SecretStr('**********'),              │ │
+│ │                 │   openai_organization=None,                            │ │
+│ │                 │   allowed_special=None,                                │ │
+│ │                 │   disallowed_special=None,                             │ │
+│ │                 │   chunk_size=1000,                                     │ │
+│ │                 │   max_retries=10,                                      │ │
+│ │                 │   request_timeout=60.0,                                │ │
+│ │                 │   headers=None,                                        │ │
+│ │                 │   tiktoken_enabled=True,                               │ │
+│ │                 │   tiktoken_model_name=None,                            │ │
+│ │                 │   show_progress_bar=False,                             │ │
+│ │                 │   model_kwargs={},                                     │ │
+│ │                 │   skip_empty=False,                                    │ │
+│ │                 │   default_headers=None,                                │ │
+│ │                 │   default_query=None,                                  │ │
+│ │                 │   retry_min_seconds=4,                                 │ │
+│ │                 │   retry_max_seconds=20,                                │ │
+│ │                 │   http_client=None,                                    │ │
+│ │                 │   http_async_client=None,                              │ │
+│ │                 │   check_embedding_ctx_length=True                      │ │
+│ │                 )                                                        │ │
+│ │         texts = [                                                        │ │
+│ │                 │   '[Startups are defined by                            │ │
+│ │                 growth](http://www.paulgraham.com/growth.html), but      │ │
+│ │                 gro'+958                                                 │ │
+│ │                 ]                                                        │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/langchain_openai/embeddings │
+│ /base.py:514 in _get_len_safe_embeddings                                     │
+│                                                                              │
+│   511 │   │   _iter, tokens, indices = self._tokenize(texts, _chunk_size)    │
+│   512 │   │   batched_embeddings: list[list[float]] = []                     │
+│   513 │   │   for i in _iter:                                                │
+│ ❱ 514 │   │   │   response = self.client.create(                             │
+│   515 │   │   │   │   input=tokens[i : i + _chunk_size], **client_kwargs     │
+│   516 │   │   │   )                                                          │
+│   517 │   │   │   if not isinstance(response, dict):                         │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │        _chunk_size = 1000                                                │ │
+│ │              _iter = range(0, 1, 1000)                                   │ │
+│ │ batched_embeddings = []                                                  │ │
+│ │         chunk_size = None                                                │ │
+│ │      client_kwargs = {'model': 'text-embedding-3-small'}                 │ │
+│ │             engine = 'text-embedding-ada-002'                            │ │
+│ │                  i = 0                                                   │ │
+│ │            indices = [0]                                                 │ │
+│ │             kwargs = {}                                                  │ │
+│ │               self = OpenAIEmbeddings(                                   │ │
+│ │                      │   client=<openai.resources.embeddings.Embeddings  │ │
+│ │                      object at 0x7fa46f2912e0>,                          │ │
+│ │                      │                                                   │ │
+│ │                      async_client=<openai.resources.embeddings.AsyncEmb… │ │
+│ │                      object at 0x7fa46eab6420>,                          │ │
+│ │                      │   model='text-embedding-3-small',                 │ │
+│ │                      │   dimensions=None,                                │ │
+│ │                      │   deployment='text-embedding-ada-002',            │ │
+│ │                      │   openai_api_version=None,                        │ │
+│ │                      │   openai_api_base=None,                           │ │
+│ │                      │   openai_api_type=None,                           │ │
+│ │                      │   openai_proxy=None,                              │ │
+│ │                      │   embedding_ctx_length=8191,                      │ │
+│ │                      │   openai_api_key=SecretStr('**********'),         │ │
+│ │                      │   openai_organization=None,                       │ │
+│ │                      │   allowed_special=None,                           │ │
+│ │                      │   disallowed_special=None,                        │ │
+│ │                      │   chunk_size=1000,                                │ │
+│ │                      │   max_retries=10,                                 │ │
+│ │                      │   request_timeout=60.0,                           │ │
+│ │                      │   headers=None,                                   │ │
+│ │                      │   tiktoken_enabled=True,                          │ │
+│ │                      │   tiktoken_model_name=None,                       │ │
+│ │                      │   show_progress_bar=False,                        │ │
+│ │                      │   model_kwargs={},                                │ │
+│ │                      │   skip_empty=False,                               │ │
+│ │                      │   default_headers=None,                           │ │
+│ │                      │   default_query=None,                             │ │
+│ │                      │   retry_min_seconds=4,                            │ │
+│ │                      │   retry_max_seconds=20,                           │ │
+│ │                      │   http_client=None,                               │ │
+│ │                      │   http_async_client=None,                         │ │
+│ │                      │   check_embedding_ctx_length=True                 │ │
+│ │                      )                                                   │ │
+│ │              texts = [                                                   │ │
+│ │                      │   '[Startups are defined by                       │ │
+│ │                      growth](http://www.paulgraham.com/growth.html), but │ │
+│ │                      gro'+958                                            │ │
+│ │                      ]                                                   │ │
+│ │             tokens = [                                                   │ │
+│ │                      │   [                                               │ │
+│ │                      │   │   58,                                         │ │
+│ │                      │   │   3563,                                       │ │
+│ │                      │   │   8772,                                       │ │
+│ │                      │   │   527,                                        │ │
+│ │                      │   │   4613,                                       │ │
+│ │                      │   │   555,                                        │ │
+│ │                      │   │   6650,                                       │ │
+│ │                      │   │   9725,                                       │ │
+│ │                      │   │   1277,                                       │ │
+│ │                      │   │   1129,                                       │ │
+│ │                      │   │   ... +220                                    │ │
+│ │                      │   ]                                               │ │
+│ │                      ]                                                   │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/openai/resources/embeddings │
+│ .py:132 in create                                                            │
+│                                                                              │
+│   129 │   │   │                                                              │
+│   130 │   │   │   return obj                                                 │
+│   131 │   │                                                                  │
+│ ❱ 132 │   │   return self._post(                                             │
+│   133 │   │   │   "/embeddings",                                             │
+│   134 │   │   │   body=maybe_transform(params, embedding_create_params.Embed │
+│   135 │   │   │   options=make_request_options(                              │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │      dimensions = <openai.Omit object at 0x7fa46f7342f0>                 │ │
+│ │ encoding_format = <openai.Omit object at 0x7fa46f7342f0>                 │ │
+│ │      extra_body = None                                                   │ │
+│ │   extra_headers = None                                                   │ │
+│ │     extra_query = None                                                   │ │
+│ │           input = [                                                      │ │
+│ │                   │   [                                                  │ │
+│ │                   │   │   58,                                            │ │
+│ │                   │   │   3563,                                          │ │
+│ │                   │   │   8772,                                          │ │
+│ │                   │   │   527,                                           │ │
+│ │                   │   │   4613,                                          │ │
+│ │                   │   │   555,                                           │ │
+│ │                   │   │   6650,                                          │ │
+│ │                   │   │   9725,                                          │ │
+│ │                   │   │   1277,                                          │ │
+│ │                   │   │   1129,                                          │ │
+│ │                   │   │   ... +220                                       │ │
+│ │                   │   ]                                                  │ │
+│ │                   ]                                                      │ │
+│ │           model = 'text-embedding-3-small'                               │ │
+│ │          params = {                                                      │ │
+│ │                   │   'input': [                                         │ │
+│ │                   │   │   [                                              │ │
+│ │                   │   │   │   58,                                        │ │
+│ │                   │   │   │   3563,                                      │ │
+│ │                   │   │   │   8772,                                      │ │
+│ │                   │   │   │   527,                                       │ │
+│ │                   │   │   │   4613,                                      │ │
+│ │                   │   │   │   555,                                       │ │
+│ │                   │   │   │   6650,                                      │ │
+│ │                   │   │   │   9725,                                      │ │
+│ │                   │   │   │   1277,                                      │ │
+│ │                   │   │   │   1129,                                      │ │
+│ │                   │   │   │   ... +220                                   │ │
+│ │                   │   │   ]                                              │ │
+│ │                   │   ],                                                 │ │
+│ │                   │   'model': 'text-embedding-3-small',                 │ │
+│ │                   │   'user': <openai.Omit object at 0x7fa46f7342f0>,    │ │
+│ │                   │   'dimensions': <openai.Omit object at               │ │
+│ │                   0x7fa46f7342f0>,                                       │ │
+│ │                   │   'encoding_format': 'base64'                        │ │
+│ │                   }                                                      │ │
+│ │            self = <openai.resources.embeddings.Embeddings object at      │ │
+│ │                   0x7fa46f2912e0>                                        │ │
+│ │         timeout = NOT_GIVEN                                              │ │
+│ │            user = <openai.Omit object at 0x7fa46f7342f0>                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/openai/_base_client.py:1259 │
+│ in post                                                                      │
+│                                                                              │
+│   1256 │   │   opts = FinalRequestOptions.construct(                         │
+│   1257 │   │   │   method="post", url=path, json_data=body, files=to_httpx_f │
+│   1258 │   │   )                                                             │
+│ ❱ 1259 │   │   return cast(ResponseT, self.request(cast_to, opts, stream=str │
+│   1260 │                                                                     │
+│   1261 │   def patch(                                                        │
+│   1262 │   │   self,                                                         │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │       body = {                                                           │ │
+│ │              │   'input': [                                              │ │
+│ │              │   │   [                                                   │ │
+│ │              │   │   │   58,                                             │ │
+│ │              │   │   │   3563,                                           │ │
+│ │              │   │   │   8772,                                           │ │
+│ │              │   │   │   527,                                            │ │
+│ │              │   │   │   4613,                                           │ │
+│ │              │   │   │   555,                                            │ │
+│ │              │   │   │   6650,                                           │ │
+│ │              │   │   │   9725,                                           │ │
+│ │              │   │   │   1277,                                           │ │
+│ │              │   │   │   1129,                                           │ │
+│ │              │   │   │   ... +220                                        │ │
+│ │              │   │   ]                                                   │ │
+│ │              │   ],                                                      │ │
+│ │              │   'model': 'text-embedding-3-small',                      │ │
+│ │              │   'encoding_format': 'base64'                             │ │
+│ │              }                                                           │ │
+│ │      files = None                                                        │ │
+│ │    options = {                                                           │ │
+│ │              │   'post_parser': <function                                │ │
+│ │              Embeddings.create.<locals>.parser at 0x7fa46eab3060>        │ │
+│ │              }                                                           │ │
+│ │       opts = FinalRequestOptions(                                        │ │
+│ │              │   method='post',                                          │ │
+│ │              │   url='/embeddings',                                      │ │
+│ │              │   params={},                                              │ │
+│ │              │   headers=NOT_GIVEN,                                      │ │
+│ │              │   max_retries=NOT_GIVEN,                                  │ │
+│ │              │   timeout=NOT_GIVEN,                                      │ │
+│ │              │   files=None,                                             │ │
+│ │              │   idempotency_key=None,                                   │ │
+│ │              │   post_parser=<function Embeddings.create.<locals>.parser │ │
+│ │              at 0x7fa46eab3060>,                                         │ │
+│ │              │   follow_redirects=None,                                  │ │
+│ │              │   json_data={                                             │ │
+│ │              │   │   'input': [                                          │ │
+│ │              │   │   │   [                                               │ │
+│ │              │   │   │   │   58,                                         │ │
+│ │              │   │   │   │   3563,                                       │ │
+│ │              │   │   │   │   8772,                                       │ │
+│ │              │   │   │   │   527,                                        │ │
+│ │              │   │   │   │   4613,                                       │ │
+│ │              │   │   │   │   555,                                        │ │
+│ │              │   │   │   │   6650,                                       │ │
+│ │              │   │   │   │   9725,                                       │ │
+│ │              │   │   │   │   1277,                                       │ │
+│ │              │   │   │   │   1129,                                       │ │
+│ │              │   │   │   │   ... +220                                    │ │
+│ │              │   │   │   ]                                               │ │
+│ │              │   │   ],                                                  │ │
+│ │              │   │   'model': 'text-embedding-3-small',                  │ │
+│ │              │   │   'encoding_format': 'base64'                         │ │
+│ │              │   },                                                      │ │
+│ │              │   extra_json=None                                         │ │
+│ │              )                                                           │ │
+│ │       path = '/embeddings'                                               │ │
+│ │       self = <openai.OpenAI object at 0x7fa46eb7a690>                    │ │
+│ │     stream = False                                                       │ │
+│ │ stream_cls = None                                                        │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/ubuntu/.local/lib/python3.12/site-packages/openai/_base_client.py:1047 │
+│ in request                                                                   │
+│                                                                              │
+│   1044 │   │   │   │   │   err.response.read()                               │
+│   1045 │   │   │   │                                                         │
+│   1046 │   │   │   │   log.debug("Re-raising status error")                  │
+│ ❱ 1047 │   │   │   │   raise self._make_status_error_from_response(err.respo │
+│   1048 │   │   │                                                             │
+│   1049 │   │   │   break                                                     │
+│   1050                                                                       │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │     input_options = FinalRequestOptions(                                 │ │
+│ │                     │   method='post',                                   │ │
+│ │                     │   url='/embeddings',                               │ │
+│ │                     │   params={},                                       │ │
+│ │                     │   headers=NOT_GIVEN,                               │ │
+│ │                     │   max_retries=NOT_GIVEN,                           │ │
+│ │                     │   timeout=NOT_GIVEN,                               │ │
+│ │                     │   files=None,                                      │ │
+│ │                     │                                                    │ │
+│ │                     idempotency_key='stainless-python-retry-62d5ebfb-39… │ │
+│ │                     │   post_parser=<function                            │ │
+│ │                     Embeddings.create.<locals>.parser at                 │ │
+│ │                     0x7fa46eab3060>,                                     │ │
+│ │                     │   follow_redirects=None,                           │ │
+│ │                     │   json_data={                                      │ │
+│ │                     │   │   'input': [                                   │ │
+│ │                     │   │   │   [                                        │ │
+│ │                     │   │   │   │   58,                                  │ │
+│ │                     │   │   │   │   3563,                                │ │
+│ │                     │   │   │   │   8772,                                │ │
+│ │                     │   │   │   │   527,                                 │ │
+│ │                     │   │   │   │   4613,                                │ │
+│ │                     │   │   │   │   555,                                 │ │
+│ │                     │   │   │   │   6650,                                │ │
+│ │                     │   │   │   │   9725,                                │ │
+│ │                     │   │   │   │   1277,                                │ │
+│ │                     │   │   │   │   1129,                                │ │
+│ │                     │   │   │   │   ... +220                             │ │
+│ │                     │   │   │   ]                                        │ │
+│ │                     │   │   ],                                           │ │
+│ │                     │   │   'model': 'text-embedding-3-small',           │ │
+│ │                     │   │   'encoding_format': 'base64'                  │ │
+│ │                     │   },                                               │ │
+│ │                     │   extra_json=None                                  │ │
+│ │                     )                                                    │ │
+│ │            kwargs = {}                                                   │ │
+│ │       max_retries = 10                                                   │ │
+│ │           options = FinalRequestOptions(                                 │ │
+│ │                     │   method='post',                                   │ │
+│ │                     │   url='/embeddings',                               │ │
+│ │                     │   params={},                                       │ │
+│ │                     │   headers=NOT_GIVEN,                               │ │
+│ │                     │   max_retries=NOT_GIVEN,                           │ │
+│ │                     │   timeout=NOT_GIVEN,                               │ │
+│ │                     │   files=None,                                      │ │
+│ │                     │                                                    │ │
+│ │                     idempotency_key='stainless-python-retry-62d5ebfb-39… │ │
+│ │                     │   post_parser=<function                            │ │
+│ │                     Embeddings.create.<locals>.parser at                 │ │
+│ │                     0x7fa46eab3060>,                                     │ │
+│ │                     │   follow_redirects=None,                           │ │
+│ │                     │   json_data={                                      │ │
+│ │                     │   │   'input': [                                   │ │
+│ │                     │   │   │   [                                        │ │
+│ │                     │   │   │   │   58,                                  │ │
+│ │                     │   │   │   │   3563,                                │ │
+│ │                     │   │   │   │   8772,                                │ │
+│ │                     │   │   │   │   527,                                 │ │
+│ │                     │   │   │   │   4613,                                │ │
+│ │                     │   │   │   │   555,                                 │ │
+│ │                     │   │   │   │   6650,                                │ │
+│ │                     │   │   │   │   9725,                                │ │
+│ │                     │   │   │   │   1277,                                │ │
+│ │                     │   │   │   │   1129,                                │ │
+│ │                     │   │   │   │   ... +220                             │ │
+│ │                     │   │   │   ]                                        │ │
+│ │                     │   │   ],                                           │ │
+│ │                     │   │   'model': 'text-embedding-3-small',           │ │
+│ │                     │   │   'encoding_format': 'base64'                  │ │
+│ │                     │   },                                               │ │
+│ │                     │   extra_json=None                                  │ │
+│ │                     )                                                    │ │
+│ │ remaining_retries = 0                                                    │ │
+│ │           request = <Request('POST',                                     │ │
+│ │                     'https://api.openai.com/v1/embeddings')>             │ │
+│ │          response = <Response [429 Too Many Requests]>                   │ │
+│ │     retries_taken = 10                                                   │ │
+│ │              self = <openai.OpenAI object at 0x7fa46eb7a690>             │ │
+│ │            stream = False                                                │ │
+│ │        stream_cls = None                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your 
+current quota, please check your plan and billing details. For more information 
+on this error, read the docs: 
+https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 
+'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}

@@ -1,0 +1,205 @@
+In today’s ever-competitive environment to drive growth, identifying and hiring key talent through a structured transaction—known as an “acquihire”—has become an increasingly popular and effective way for companies to address hiring needs and accelerate product innovation and development.
+Often joining the acquiring company as a unit or existing team, employers also tend to benefit from these individuals having a relationship with their peers and a history of working together. However, hiring any new talent into your organization, let alone a group of individuals, will require thoughtful leveling and onboarding so as to ensure a successful integration.
+The challenge for most companies is figuring out whether an acquihire makes sense and, if so, how to successfully pull it off. Here’s some advice that we’ve compiled over the course of years assisting our portfolio companies in evaluating and executing on these strategic opportunities. We address several key facets to a successful acquihire transaction, including:
+How to think about defining your priorities.
+How to diligence the opportunity.
+How to think about deal structure considerations.
+How to properly integrate the newly hired individuals into your existing organization.
+First thing’s first: Consider what you’re looking for
+As with many things in life, thinking ahead and executing on a defined strategy or plan will optimize your chances of success. On the topic of driving incremental or “inorganic” growth to your business, we often advise our management teams to take the time to define these various priorities ahead of engaging in strategic discussions:
+Formulate a strategic plan.
+Has your team worked to establish a strategic growth plan? Consider your strategic growth plan to be ways to drive additional growth, or inorganic growth, beyond that of your core operating plan. Look for organizations or teams in your ecosystem today that might help to accelerate your business and revenue targets.
+Review your product roadmap and identify “opportunity” pockets.
+From a product development pe
+rspective, engage your team in thinking about how your development roadmap might be accelerated through inorganic means.
+Assess your hiring needs.
+Working with your business leads on a hiring plan to support the company’s growth is not only a critical exercise, but it will help in determining priority hiring needs and can serve as a roadmap for identifying acquihire opportunities.
+Identify an internal strategic SWAT team.
+Create a core team that will evaluate the acquisition and define the key roles and responsibilities on the team. Clarify who makes specific decisions and which teams need to be consulted, making sure to leverage the operations team and your external counsel.
+Identifying the most valuable opportunities takes time—and simply knowing who is who will likely not be enough to ensure the success of a transaction. Mapping, identifying, and forging relationships with ecosystem partners is a valuable and accretive exercise for your organization, whether on the sales or strategic front:
+Map your ecosystem.
+Has your team worked to build relationships with other ecosystem players, both from a commercial and strategic angle? Develop a list of ecosystem players, from big to small, and use this list as a roadmap for developing relationships.
+It’s personal
+. Founders know founders, and entrepreneurs know entrepreneurs; always be developing relationships of who’s who and core competencies. Relationship building starts at the top! It is often said the most productive strategic transactions are grounded in relationships.
+Soldiers in the field.
+Sales and business development teams in the field are often an excellent source of identifying strategic opportunities as they come across key emerging players and competitors. Encourage this relationship-building activity across your organization, it’s both near- and long-term accretive.
+You’ve identified a target: Now the real work begins
+Do your (due) diligence
+One of the critical ingredients in a successful transaction is having conducted satisfactory due diligence, or a comprehensive review, of the opportunity at hand. This should start on Day 1, and run through closing day. First, determine what you’re working with and what is available for consideration:
+Scope of opportunity.
+Consider how the opportunity was presented—opportunistically or as a marketed process? Assess what assets are available, and work to evaluate what assets are of strategic interest to your organization.
+Develop a foundational understanding.
+Begin with an introductory/exploratory discussion: history of the business, evolution of product development and offering, composition of the team, culture, and business workflows.
+Look for signals.
+Look for early messaging on value expectations as potential yellow flags—the fit is most important, and with the right fit, value will come. Differences in cultures can create disruption once the integration occurs, so it is imperative to comprehend these issues early.
+Build a data room.
+Create a virtual data room to store all documents shared between both organizations. Initially, most of the documents comprising the data room will be from the target company, but expect to also reciprocate and share certain information as the acquirer such as capitalization history. Key members of the acquisition team will have access to the content and facilitate information sharing between the two companies on a continual basis during the due diligence process.
+Understand th
+e financial health of the organization
+Understanding liabilities and other obligations on the part of the target organization, even if you aren’t legally assuming them, is an important factor in assessing how and whether a transaction can be consummated:
+Assets.
+Determine how much cash the company has on hand, and how much “active” runway the business has under normal operations before the team begins to be impacted with potential reductions in force. Identify any accounts receivables or other assets that could serve to settle the winding down of the business.
+Liabilities.
+While some liabilities will not be of concern to an acquirer, some will present impediments to getting a deal done, such as a PG (personal guarantees) or other obligations. Unpaid tax or employee obligations are particularly concerning, as state law may require an acquirer to assume these liabilities if unsatisfied.
+Learn what the team wants in a transaction
+Gaining insight into the team’s goals will be a valuable tool when it comes to potential fit within your organization and your overall culture:
+Be direct and ask the hard questions.
+What does the team want and what would they consider a successful outcome? Ar
+e there any specific requirements of the company’s board or its major shareholders? What are the team’s specific “super powers”?
+Active vs. virtual team.
+Is the team still current, or is there a “virtual” team that is being presented in a potential transaction? There’s typically a short fuse on an acquihire opportunity, such that the team begins to independently look for other opportunities and the integrity of the team as a unit begins to atrophy. We discuss retention strategies later in the piece as a means of maintaining the acquihired target team.
+Developed IP.
+Has the business developed any IP/technology that would be complementary to your current business? Notwithstanding the fact that the deal is an acquihire, in most instances
+it is advisable to acquire the IP by virtue of an asset acquisition as a defensive measure
+against the possibility of another acquirer buying the IP and then bringing a troll suit. At the very least, a defensive license to the company’s IP and a release of claims from the company and its major shareholders should be obtained whenever possible.
+Understand the ownership dynamics
+While your interest may lie solely with the team, if the target entity is an active organization, you will need to understand—and potentially deal directly with—key shareholders in order to consummate a transaction.
+Gain a view of the full (capital) picture.
+Understanding the financing history and ownership structure of the company will provide valuable signals in how a deal might come together. You will need to
+understand who the largest shareholders are, and what rights they have to potentially block a transaction
+. This will tell you who is needed to support a transaction in order to get to a successful outcome.
+Inside vs. outside capital.
+A founder-led, bootstrapped business will present different structural (and potentially value) options vs. a business funded by outside investors, be it individuals or institutions.
+Get to know the team
+As our colleague Jeff Stump recently
+explained in another a16z
+post
+, it’s critical to establish trust with key personnel early on in the hiring process, even before determining whether someone has the tools to perform the job. The same truth applies to an acquihire: invest the time in getting to know the team on an individual basis, beginning with the CEO and through each team member in consideration. Getting to know the team—as individuals—will in turn tell you a lot about how a company is run, and its overall potential fit within your organization “beyond the resume”:
+Founder/CEO messaging.
+Analyze what message the founder is sending. Is it that everyone is strong, or is there an additional evaluation layer offered? Are they just looking for the best offer, or is the emphasis on fit? Understand what the CEO has communicated to the organization regarding the overall health of the business, notably the team.
+Conduct 1:1 meetings and understand personal goals.
+Spend time with each team member independently if you can, but expect to be given this access post-initial indication of interest. Take the time to understand each team member’s goals and objectives as additional signals around fit within your organization.
+Talent assessment.
+When considering an acquihire opportunity, it is crucial to assess the talent. Does the team have the necessary skills/experiences? Who on your team will be responsible for assessing the technical skills?
+During the assessment, it is important to avoid bringing over performance or behavioral issues
+, or redundant roles. In some instances, you might only need employees in a transition capacity. Also, it is important to have a sense of morale on the team.
+Timing.
+Understanding the founding team’s timeline. Does it align with your timeline? What is the business driver to be receptive to the opportunity? Are you competing with other companies?
+Review the organization’s HR practices
+Understanding an organization’s HR practices, organizational structure, and overall culture will offer you a valuable roadmap towards setting—and meeting—expectations from the team you are considering bringing into your organization:
+Understand the org structure.
+Review a copy of the organizational chart by job function, management and reporting structures, workflows, and processes, as well as culture documents including firm values and behaviors—these speak volumes! Evaluate the geographical locations and current hiring practices. Is the company a remote first or hybrid organization? What are the intended hiring plans? Does the company have any pending offers? Will these employees be hired into the new organization?
+Culture.
+What is the company’s culture and have values been shared with the organization? What behaviors are rewarded in the organization? Review any culture documents including company values and behaviors. The greatest risk with an acquihire is a conflicting culture. It is critical to comprehend any potential issues during the due diligence process.
+Compensation plans and policies.
+Learn how the team was compensated: cash, or cash plus equity. What is the company’s compensation philosophy and strategy? Take the time to review the executive compensation, job leveling, bonus programs, promotion policies, refresh best practices, and unique benefits that might have been offered on an exceptional basis.
+Benefits/insurance.
+Audit all benefit plan agreements: medical, dental, vision, premium coverage, life insurance, any pension plans, perks, time-off policies, etc. What insurance plans are in place, from D&O (Directors & Officers) to EPLI (Employment Practices Liability Insurance)? It is necessary to understand what policies are in place, as well as variances with your current practices. This will formulate how you will communicate any potential changes with their benefits.
+Employee agreements.
+Assess each team member’s status and all employment agreements: offer letters, arbitration, confidentiality agreements, non-competes, etc. Understand their employment status from full-time to part-time status, and salaried to hourly employees.
+For any commission-based employees, it is imperative to obtain any sales or bonus plan agreements.
+Assess all contractor and vendor agreements for any co-employment risks. Separately, identify current and prior consulting agreements as well as advisor agreements.
+Employee relation issues.
+Evaluate pending and current employee issues. Understand any current or prior performance issues, investigations, accommodation requests, and employee-relation issues. Are there any pending or threatened lawsuits against or investigations of the company?
+HR processes/programs.
+Comprehend how the HR organization operates. What HR practices are in place inclusive of the following: performance management, talent calibrations, employee engagement surveys, recruiting, onboarding, and career growth programs, as well as any supporting materials.
+HR policies.
+Obtain all policies, including employee handbooks, severance policies and practices, immigration, compliance, expense policy, leaves of absence, etc. How is the company handling COVID? What practices have been instituted?
+HR analytics/reporting.
+Review and analyze any recruiting metrics, attrition reports, employee historical reports, and compliance reporting conducted by the organization.
+HR tools.
+Evaluate what HR tools have been instituted from ATS (Applicant Tracking System), HRIS (Human Resources Information System), performance management, and stock administration—and have an understanding of any contract obligations and tool integrations.
+Get to know the technology and product
+Spend the time to get to know the company’s product offering, technology, and underlying IP. Understanding what the team has accomplished together will help to inform you as to future productivity and capabilities. Additionally, while you may not have the intention of purchasing the IP in a transaction, it’s advisable in most instances to have a defensive strategy against any claims on the IP from future owners:
+A company’s mission speaks volumes.
+Even if the stated opportunity is with the team, take the time to understand the company’s product and offering, as value may be identified in the IP. Understand the technology’s value prop, communication platforms, programming languages, and sales tools that support the business.
+Team accomplishments.
+Assess what the team has accomplished from a product development and commercialization standpoint, if anything. You’ll also want to ask questions around how long they have worked together as a unit,any potential concerns around a subset of the team, or any potential risk in team productivity.
+Play IP defense.
+As noted earlier, regardless of whether the transaction is an acquihire for the team only or an asset purchase, in most instances it is advisable to either acquire the IP or obtain a license to the IP with a release of claims from the company — thereby protecting your organization from another acquirer buying the IP and then bringing a troll suit.
+Once your strategic SWAT team has conducted satisfactory diligence on the team and overall business, the next phase is to work with your outside counsel (and board/investors) on a deal structure that will induce a transaction, while at the same time balancing the needs of your organization both today and in the future.
+Deal time: Structural options and considerations
+Keeping the structure as simple as possible will be important to keeping transaction costs low and reducing the time necessary to complete a transaction, thereby increasing the odds of a successful deal.
+How competitive does an offer
+really
+need to be?
+Just as every individual is unique, every deal is unique. While there is plenty of data available on current market-level compensation by title and role, this employment compensation should be treated separately from the transaction compensation, which is the incremental value that may need to be offered in order to induce a deal:
+Value framework.
+While the total value required to consummate a transaction will vary on a deal-by-deal basis, there are
+two primary categories to keep in mind
+as a framework for deal value:
+(1) employment consideration
+, which is the compensation for each team member (salary and bonus, equity, benefits) that should reflect your standard compensation packages paid to current team members; and
+(2) deal consideration
+, which may include retention payments to certain or all team members, as well as any potential additional consideration you may need to pay to the entity’s shareholders depending on a number of deal-specific variables (e.g. how much of a strategic priority the acquisition is to you, how competitive the process is, and what you are receiving in the transaction). There is much to consider here, and every transaction is unique.
+Offer consideration.
+While cash is king, a valuable means of bridging the gap on valuation
+expectations is through the effective utilization of equity—and the hope that what is worth X today will be worth 10X+ in the future.
+Seek the balance of cash and stock mix that works best for your company today
+based on current capital resources.
+Never pay full price (at closing).
+Another means of bridging a value gap is to time-delay the payment of consideration to the team, while also building in a performance metric or milestone. Incentivizing and retaining the acquired team is of critical importance, and this is often effectively done by structuring future compensation payments and future vesting of equity-based compensation tied to what parameters of the business and team are most important to you.
+What does the team get?
+Based on your current compensation philosophy and affordability, you need to consider compensation packages for the target’s employees, as well as how this impacts total rewards. Identify the key employees and who needs to be retained to ensure that the deal closes. Consider a closing condition requiring 100% of these key employees to accept post-closing offers of employment to add deal protection.
+Retention strategy.
+A critical success factor for the acquihire is identifying and retaining top/key employees. Without retaining these employees, the deal will likely provide limited value.
+Assess who really needs to be retained
+– once that is determined, it is imperative to develop offer letters with clarity around bonus structure, role, and compensation/benefits package. These key employees need to be committed to the opportunity. Determine which key employees need to sign the offer letters and ensure that they are committing to coming over to the new company. Remember, these transactions are about investing in the employees — you will want to create a retention strategy and identify any potential flight risks upfront and create a contingency plan.
+Deal structure.
+In many cases, a simple asset acquisition limited to the company’s IP is sufficient. If there are reasons not to acquire the company’s IP, then you should at a minimum have the company grant you a license to all of its IP as a defensive measure against infringement claims in the future, as there is always a risk that the newly hired employees use IP from their prior company when they join your team.
+Keep it simple and avoid pitfalls.
+Avoid structuring the transaction as a merger or acquisition of stock. If you acquire the company, then you acquire all of its assets and liabilities—and you could unknowingly inherit liabilities and costs that you did not intend. You should also obtain a release of claims from the company and its largest investors to further reduce the risk of claims.
+A sample acquihire transaction
+Deal Summary:
+Alpha Company has reached an agreement to acquihire a team of 10 engineers from Bravo Company, a bootstrapped business, for a total purchase price of (up to) $2 million.
+Deal Consideration:
+Up to $2 million will be paid in cash to Bravo Company at closing, at a rate of $200,000 for each engineer who accepts the offer of employment with Alpha Company. Bravo Company will utilize the $150,000 of closing cash consideration to repay an outstanding $100,000 convertible note from friends and family, as well as $50,000 in entity wind-down obligations. The balance of closing cash will be paid out to shareholders in accordance with the cap table and charter.
+Employment Consideration:
+In addition to receiving standard employment packages* (cash and stock), each team member will receive additional retention incentives in the form of cash and/or options/RSUs of equivalent value to their Bravo Company equity (face value of $1 million) in Alpha Company, which shall vest over a standard 4-year structure. (Or, consider a mix of time-based and performance-based vesting milestones.)
+*Important*:
+You will want to ensure that as you onboard the new team, employment compensation offered is commensurate with those of your current team. For example, an incoming “acquihired” VP of engineering should receive compensation that is equivalent to your current VP of engineering, so as to ensure consistency in having an equitable compensation philosophy.
+Note: The above is purely an illustration of a sample transaction and methodology; any deal and employment compensation values are for illustrative purposes only and should not be relied upon for any given transaction without first considering the specific circumstances.
+Establish key milestones and objectives for the transaction
+Taking the time to set milestones and objectives for how a transaction will be deemed successful is arguably equally—if not more important—than consummating the transaction itself. Here are a few key factors to take into consideration when establishing key parameters for success:
+What defines a successful deal?
+How will you and your senior managers define success at closing, one year in, and beyond? Work toward leveling and aligning the team with your existing org structure in an effort to set up everyone for success. Have managers prepared to address questions surrounding the change and how this impacts each employee. Employees really want to know how this impacts them and why they should stay.
+Org structure.
+How does the new team fit into your current org structure post-transaction? Consider where the new team will be most efficient—independent or fully integrated into your existing teams? Do this work ahead of time and, to the extent possible, be clear on messaging ahead of finalizing the deal. Clarify if the founders will be staying on or will be transitioning, as this messaging can impact the team’s retention. Focus on defining the key roles this team will be playing and how the team aligns with the current business.
+Test and look for the unexpected.
+Identify the key workflows, critical interdependencies, potential challenges, talent processes, and differences between the cultures. Are there any potential top/key performer retention risks that we need to be aware of? Investing in due diligence early will support the development of your integration planning. Recognize that this is a significant change for the organization.
+Workflows.
+Evaluate the processes and programs between the two organizations, and have a plan for addressing variances. Avoid maintaining separate policies for both companies, especially if they are merging. Design a plan for transitioning the company’s partners and programs to your current vendors.
+Concise communication is critical.
+Define your communication strategy, and specifically the business rationale for the transaction. Create a narrative around how this will provide business success and align with the employees’ contributions. During an acquisition, employees are primarily concerned what the change means to their role, pay, and benefits—address this directly.
+Have a Day 1 strategy.
+Develop a plan for Day 1 when communicating to the organization. Specifically, host an all-hands and breakout sessions with managers and employees to discuss offer letters and answer questions, and ensure there are sessions for the teams to interact and explain how they will operate together.
+Day 1 logistics.
+For Day 1 to go smoothly, have a plan for IT (i.e. email addresses, laptops, and tools), have offer letters prepared, schedule sessions dedicated to benefits and new policies, build FAQ materials, have managers scheduled to meet with teams, and allow time for teams to process the change. Establish feedback channels for employees.
+Establish post-merger assessments.
+Create success metrics and a project plan for the acquisition’s integration, clarifying roles and responsibilities, and a timeline of key milestones to ensure the deliverables are tracking. Identify potential issues upfront, and key check points to immediately address. Ensure the success metrics align to the desired outcomes from the acquisition.
+With your due diligence now complete, transaction documents signed and the deal officially closed, the next phase is often the most challenging—ensuring that post-merger integration of the team into your current organization gets the critical attention it deserves. Much coordination will need to go into this final phase in order to claim the transaction an ultimate success.
+The deal is done, now what?
+Congratulations, the deal is done! Now comes the hard part—making sure the integration of the team is managed correctly. Among other things, work to accomplish this by effectively communicating your company’s culture, business processes, and overall workflows. Getting this right post-transaction is critical but, unfortunately, is a common pitfall in transactions because companies fall into the rhetoric that once a deal is done, it’s behind you. Day 1 is just the beginning!
+Communication
+Open lines.
+Focus on reinforcing the right message and driving communication through the entire organization. Communication needs to be frequent, targeted, and relevant to the strategy behind the acquisition and implications for all employees.
+Be clear.
+Articulate the why and business rationale and how this impacts each function and workflows. It is critical to train managers to avoid messaging challenges and conflicting messages.
+Unified message.
+Collaborate with key internal stakeholders, organization leaders, and PR to create a coordinated communication strategy from a pre-merger announcement to team leaders to the post-merger public announcement. Ensure that external communications align with internal communications.
+Meeting cadence.
+Define the communication cadence, including all-hands meetings, staff meetings, and 1:1s, and allow opportunities for employees to ask questions. To ensure collaboration, listen and understand why certain questions are asked.
+Workflows
+Define workflows.
+Articulate the workflows ranging from how decisions are made, managing conflicts, cultural norms, to specific training needs.
+Highlight contributions.
+Integrate the new employees into the company’s vision and roadmap, and explain how their work contributes to the organization’s success.
+Stop and listen.
+Invest the time in supporting the new employees to comprehend your company’s culture and behaviors by illustrating how the company operates.
+Connecting the dots.
+Communicate to the new employees how the operational and business processes operate across each function, including HR programs and processes, and org structure.
+Integration
+Do check-Ins.
+Start a project plan for Day 1 as well as 30-, 60-, and 90-day plans—and analyze key metrics aligned to the transaction’s success. Seek opportunities to check-in on employees, and a specific meeting to communicate benefits, policies, visions/mission, and roadmap.
+Anticipate Q&A.
+Ensure that managers are trained regarding the narrative and how to manage questions. If appropriate, provide a mentor for the new employees to assist with assimilation into the organization.
+Welcome aboard!
+Establish a particular onboarding for each function. For example, we would want to articulate the sales cycle, process, structure, and company pitch for selling into the market, etc.
+Monitor engagement.
+Remember, these transactions are about investing in the employees—you will want to ensure that top/key employees are engaged. Managers will want to identify any potential flight risks upfront and create a contingency plan.
+Establish checkpoints.
+Continue to utilize checkpoints throughout the process to ensure alignment with the transaction’s success metrics by holding meetings with the deal team.
+Set up a post-mortem.
+Meet to evaluate the transaction post-closing to review specifically what worked, any challenges, cultural issues, and process improvements. Ensure the first meeting is held no later than 30 days after the close. Continue to have the leadership connect regarding progress of the acquisition. Celebrate successes with the team through the integration process.
+That’s a wrap! From determining and identifying your priorities all the way through to post-merger integration, there is much to take into account when engaging in acquihire activities. We hope this piece will serve as a helpful guide on your journey.
+Thanks to Nathan Hagler of Goodwin Procter LLP for his contributions, and Sarah Wang, Shannon Schiltz, and many others for their valuable time to review drafts.

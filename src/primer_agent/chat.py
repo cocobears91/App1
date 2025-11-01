@@ -8,9 +8,9 @@ from typing import Iterable
 import typer
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-from langchain.schema import Document
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
+from langchain_core.documents import Document
 
 from . import config
 from .config import VECTORSTORE_DIR

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import time
 from dataclasses import asdict
 from html import unescape as html_unescape
 from typing import Iterable, List, Sequence
@@ -12,10 +13,15 @@ from typing import Iterable, List, Sequence
 import requests
 import typer
 from bs4 import BeautifulSoup
-from langchain.schema import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+try:  # openai RateLimitError location varies across versions
+    from openai import RateLimitError
+except ImportError:  # pragma: no cover
+    RateLimitError = Exception
 
 from . import config
 from .config import RAW_DATA_DIR, VECTORSTORE_DIR
@@ -69,7 +75,7 @@ def main(
 
     VECTORSTORE_DIR.mkdir(parents=True, exist_ok=True)
 
-    vector_store = FAISS.from_documents(documents, embeddings)
+    vector_store = _vector_store_with_backoff(documents, embeddings)
     vector_store.save_local(str(VECTORSTORE_DIR))
 
     _write_manifest(specs, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
@@ -183,7 +189,44 @@ def _build_embeddings():
             "OPENAI_API_KEY must be configured to build embeddings. "
             "Set it via environment variable or an .env file."
         )
-    return OpenAIEmbeddings(openai_api_key=api_key)
+    return OpenAIEmbeddings(
+        openai_api_key=api_key,
+        model="text-embedding-3-small",
+        max_retries=10,
+        request_timeout=60,
+    )
+
+
+def _vector_store_with_backoff(documents: Sequence[Document], embeddings: OpenAIEmbeddings) -> FAISS:
+    iterator = iter(documents)
+    first = next(iterator)
+    store = FAISS.from_texts(
+        [first.page_content],
+        embeddings,
+        metadatas=[first.metadata],
+    )
+
+    for doc in iterator:
+        _add_document_with_backoff(store, doc)
+
+    return store
+
+
+def _add_document_with_backoff(store: FAISS, doc: Document) -> None:
+    delay = 2.0
+    attempts = 0
+    while True:
+        try:
+            store.add_texts([doc.page_content], metadatas=[doc.metadata])
+            time.sleep(0.5)
+            return
+        except RateLimitError as exc:  # pragma: no cover - network dependent
+            attempts += 1
+            if attempts >= 12:
+                raise exc
+            sleep_for = min(delay * (1.5 ** attempts), 30.0)
+            typer.echo(f"Rate limited, retrying in {sleep_for:.1f}s...")
+            time.sleep(sleep_for)
 
 
 def _write_manifest(specs: Iterable[SourceSpec], *, chunk_size: int, chunk_overlap: int) -> None:

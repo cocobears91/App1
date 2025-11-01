@@ -1,0 +1,132 @@
+rules:
+  - id: SNF_CONSOLIDATED_BILLING_DME
+    scope: line
+    description: >-
+      DME items furnished during a skilled nursing facility stay are generally subject to
+      consolidated billing and should not be billed separately unless the item is on the CMS
+      exclusion list.
+    applies_to:
+      facility_type: ["SNF"]
+    conditions:
+      all:
+        - field: "line.hcpcs_cpt"
+          operator: "in"
+          value: ["E0260", "E0261", "E1390"]
+        - field: "metadata.consolidated_billing_exempt"
+          operator: "missing"
+    finding:
+      severity: "high"
+      message: "DME subject to SNF consolidated billing cannot be billed separately."
+      rationale: "CMS SNF consolidated billing guidance requires DME to be bundled unless explicitly exempt."
+
+  - id: HOME_HEALTH_F2F_REQUIRED
+    scope: claim
+    description: >-
+      Home health episodes initiated under Medicare require a physician face-to-face encounter
+      within 90 days prior or 30 days post start of care.
+    applies_to:
+      facility_type: ["HomeHealth"]
+      coverage_type: ["MedicareA", "MedicareB", "MedicareAdvantage"]
+    conditions:
+      all:
+        - field: "metadata.face_to_face_date"
+          operator: "missing"
+        - field: "header.service_from"
+          operator: "exists"
+    finding:
+      severity: "high"
+      message: "Missing documented physician face-to-face encounter for home health episode."
+      rationale: "Medicare Benefit Policy Manual - Chapter 7 section 30.5.1."
+
+  - id: THERAPY_INTENSITY_FLAG
+    scope: claim
+    description: >-
+      PDPM therapy components expect intensity aligned with clinical category. Very low
+      therapy minutes paired with high rehabilitation codes may trigger medical review.
+    applies_to:
+      facility_type: ["SNF"]
+    conditions:
+      all:
+        - field: "header.diagnosis_codes"
+          operator: "contains"
+          value: "Z47.89"
+        - any:
+            - field: "metadata.total_therapy_minutes"
+              operator: "lte"
+              value: 60
+            - field: "metadata.average_daily_therapy_minutes"
+              operator: "lte"
+              value: 20
+    finding:
+      severity: "medium"
+      message: "Therapy minutes appear low for PDPM rehab stay; ensure documentation supports skilled need."
+      rationale: "CMS PDPM clinical category rehab therapy intensity expectations."
+
+  - id: CCM_TIME_REQUIREMENT
+    scope: line
+    description: >-
+      Chronic care management (CCM) codes require minimum 20 minutes of clinical staff time per month.
+    applies_to:
+      coverage_type: ["MedicareB", "MedicareAdvantage"]
+      hcpcs_cpt: ["99490", "99439"]
+    conditions:
+      all:
+        - field: "metadata.ccm_minutes"
+          operator: "lt"
+          value: 20
+    finding:
+      severity: "high"
+      message: "Reported CCM minutes below 20-minute requirement; adjust time tracking or code selection."
+      rationale: "Medicare PFS CCM requirements."
+
+  - id: HOSPICE_THERAPY_CONFLICT
+    scope: claim
+    description: >-
+      Beneficiaries under hospice election typically cannot receive intensive rehab billed outside the hospice benefit without clear documentation and hospice coordination.
+    applies_to:
+      facility_type: ["SNF"]
+    conditions:
+      all:
+        - field: "patient.hospice_election"
+          operator: "equals"
+          value: true
+        - field: "metadata.hospice_election_documented"
+          operator: "equals"
+          value: false
+    finding:
+      severity: "high"
+      message: "Therapy billed while hospice election active; confirm hospice coordination and coverage responsibility."
+      rationale: "CMS hospice consolidated billing and coordination of care requirements."
+
+  - id: HOME_HEALTH_VISIT_INTENSITY
+    scope: claim
+    description: >-
+      Excessive visit frequency for home health services may indicate scheduling, coverage, or utilization issues requiring medical review.
+    applies_to:
+      facility_type: ["HomeHealth"]
+    conditions:
+      all:
+        - field: "metadata.visits_per_week"
+          operator: "gt"
+          value: 10
+    finding:
+      severity: "medium"
+      message: "High visit frequency detected; validate medical necessity and plan of care approval."
+      rationale: "HH PPS utilization management best practices."
+
+  - id: DME_PHYSICIAN_ORDER_REQUIRED
+    scope: line
+    description: >-
+      Durable medical equipment billed under Medicare Part A/B requires a signed physician order supporting the supply.
+    applies_to:
+      hcpcs_cpt: ["E0260", "E0261", "E1390"]
+    conditions:
+      all:
+        - field: "metadata.physician_order_present"
+          operator: "equals"
+          value: false
+    finding:
+      severity: "high"
+      message: "Missing physician order documentation for billed DME item."
+      rationale: "CMS DME coverage regulations and documentation standards."
+

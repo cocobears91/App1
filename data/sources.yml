@@ -1,0 +1,50 @@
+version: 1
+sources:
+  - id: yc_before_growing
+    organization: yc
+    title: "Before growing your startup"
+    url: https://www.ycombinator.com/library/4p-before-growing-your-startup
+    parser: yc_library
+    tags: [product, growth]
+
+  - id: yc_essential_advice
+    organization: yc
+    title: "YC's essential startup advice"
+    url: https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice
+    parser: yc_library
+    tags: [founder, strategy]
+
+  - id: yc_later_stage
+    organization: yc
+    title: "Later stage advice for startups"
+    url: https://www.ycombinator.com/library/4q-later-stage-advice-for-startups
+    parser: yc_library
+    tags: [scaling, operations]
+
+  - id: yc_navigating_success
+    organization: yc
+    title: "Navigating success for your startup"
+    url: https://www.ycombinator.com/library/4s-navigating-success-for-your-startup
+    parser: yc_library
+    tags: [strategy, fundraising]
+
+  - id: a16z_acquihires
+    organization: a16z
+    title: "The Complete Guide to Acquihires"
+    url: https://a16z.com/the-complete-guide-to-acquihires/
+    parser: a16z_wp
+    tags: [talent, m_and_a]
+
+  - id: a16z_hustlin_tech
+    organization: a16z
+    title: "Introducing Hustlin Tech: Our guides to technology for hustlers"
+    url: https://a16z.com/introducing-hustlin-tech-our-guides-to-technology-for-hustlers/
+    parser: a16z_wp
+    tags: [go_to_market, community]
+
+  - id: a16z_exit_options
+    organization: a16z
+    title: "IPOs and Beyond: A guide to exit options for companies"
+    url: https://a16z.com/ipos-and-beyond-a-guide-to-exit-options-for-companies/
+    parser: a16z_wp
+    tags: [finance, exits]

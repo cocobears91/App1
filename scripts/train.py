@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from pathlib import Path
 
 import click
@@ -20,6 +21,10 @@ logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(m
 @click.option("--config", type=click.Path(path_type=Path), default=None, help="Optional JSON config override.")
 def main(samples: int | None, seed: int | None, config: Path | None) -> None:
     cfg = Settings()
+    if config is None:
+        config_env = os.getenv("CONFIG_PATH")
+        if config_env:
+            config = Path(config_env)
     if samples:
         cfg.training_sample_size = samples
     if seed:

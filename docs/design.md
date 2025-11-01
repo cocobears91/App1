@@ -20,11 +20,12 @@
 ### Data Flow
 1. **Ingest** claim batch.
 2. **Normalize** to canonical schema.
-3. **Lookup** relevant rules/coverage policies via knowledge orchestrator.
-4. **Apply** deterministic rules (hard failures short-circuit).
-5. **Score** claim via ML model for nuanced risk (e.g., medical necessity, documentation sufficiency).
-6. **Generate** explanations and recommended fixes.
-7. **Log** results, update feedback store, and optionally trigger re-training if new labels exceed threshold.
+3. **Persist/Load** data via JSONL datasets or integrations with secure data stores.
+4. **Lookup** relevant rules/coverage policies via knowledge orchestrator.
+5. **Apply** deterministic rules (hard failures short-circuit).
+6. **Score** claim via ML model for nuanced risk (e.g., medical necessity, documentation sufficiency).
+7. **Generate** explanations and recommended fixes.
+8. **Log** results, update feedback store, and optionally trigger re-training if new labels exceed threshold.
 
 ### Data Schema (Canonical)
 
@@ -44,7 +45,7 @@
 - **Rule Layer**: Authored by SMEs, validated via unit tests and synthetic claim scenarios.
 - **ML Risk Model**:
   - Input features: service mix, diagnosis clusters, prior denials, documentation tags.
-  - Labels: binary/ordinal denial outcomes, severity categories.
+  - Labels: binary/ordinal denial outcomes, severity categories, sourced from JSONL datasets or de-identified warehouse extracts.
   - Algorithms: XGBoost (baseline), optionally fine-tuned domain-specific transformer.
   - Training cadence: monthly or upon significant policy updates.
   - Evaluation: precision/recall on critical denial categories, calibration plots, fairness by demographic attributes.

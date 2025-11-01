@@ -83,15 +83,22 @@ def _create_claim(claim_id: str, facility_type: str, coverage_type: str, seed: i
                 "total_therapy_minutes": random.randint(30, 120),
                 "average_daily_therapy_minutes": random.randint(10, 45),
                 "consolidated_billing_exempt": exempt,
+                "physician_order_present": random.random() < 0.85,
             }
         else:
             metadata = {
                 "facility_type": facility_type,
                 "total_therapy_minutes": random.randint(30, 120),
                 "average_daily_therapy_minutes": random.randint(10, 45),
+                "physician_order_present": random.random() < 0.9,
             }
             if metadata["total_therapy_minutes"] < 60:
                 findings_risk = max(findings_risk, 1)
+        metadata.setdefault("hospice_election_documented", True)
+        if patient.hospice_election and any(line.hcpcs_cpt in {"97110", "97112", "97530"} for line in lines):
+            metadata["hospice_election_documented"] = False
+            findings_risk = max(findings_risk, 1)
+        metadata["visits_per_week"] = random.randint(3, 9)
     elif facility_type == "HomeHealth":
         lines.append(
             ClaimLine(
@@ -106,6 +113,8 @@ def _create_claim(claim_id: str, facility_type: str, coverage_type: str, seed: i
         metadata = {
             "facility_type": facility_type,
             "face_to_face_date": (_random_date(service_from - timedelta(days=60), service_from + timedelta(days=20))).date() if face_to_face else None,
+            "visits_per_week": random.randint(4, 12),
+            "physician_order_present": random.random() < 0.8,
         }
         if not metadata["face_to_face_date"]:
             findings_risk = max(findings_risk, 1)
@@ -122,6 +131,8 @@ def _create_claim(claim_id: str, facility_type: str, coverage_type: str, seed: i
         metadata = {
             "facility_type": facility_type,
             "ccm_minutes": random.randint(10, 40),
+            "visits_per_week": random.randint(2, 8),
+            "physician_order_present": random.random() < 0.75,
         }
         if metadata["ccm_minutes"] < 20 and lines[0].hcpcs_cpt in {"99490", "99439"} and coverage_type in {"MedicareB", "MedicareAdvantage"}:
             findings_risk = max(findings_risk, 1)

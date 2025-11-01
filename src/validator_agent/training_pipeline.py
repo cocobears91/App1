@@ -10,6 +10,7 @@ from typing import Dict, Tuple
 import pandas as pd
 
 from .config import Settings, settings
+from .data_loading import load_dataset
 from .feature_engineering import build_feature_frame
 from .model_training import RiskModelTrainer
 from .synthetic_data import generate_synthetic_claims
@@ -29,13 +30,29 @@ class TrainingPipeline:
         self.cfg = cfg or settings
 
     def _prepare_training_data(self) -> Tuple[pd.DataFrame, pd.Series]:
-        claims, labels = generate_synthetic_claims(
-            n=self.cfg.training_sample_size,
-            seed=self.cfg.training_seed,
-        )
+        if self.cfg.data_source == "synthetic":
+            claims, labels = generate_synthetic_claims(
+                n=self.cfg.training_sample_size,
+                seed=self.cfg.training_seed,
+            )
+        elif self.cfg.data_source == "jsonl":
+            if not self.cfg.claims_dataset_path:
+                raise ValueError("claims_dataset_path must be provided for jsonl data source")
+            claims, labels = load_dataset(
+                claims_path=self.cfg.claims_dataset_path,
+                labels_path=self.cfg.labels_dataset_path,
+            )
+        else:
+            raise ValueError(f"Unsupported data_source '{self.cfg.data_source}'")
+
         features = build_feature_frame(claims)
         features = features.fillna(0).astype(float)
-        target = pd.Series(labels).loc[features.index]
+        labels_series = pd.Series(labels, dtype=float)
+        target = labels_series.reindex(features.index).fillna(0).astype(int)
+
+        if self.cfg.training_sample_size and len(features) > self.cfg.training_sample_size:
+            features = features.sample(n=self.cfg.training_sample_size, random_state=self.cfg.training_seed)
+            target = target.loc[features.index]
         return features, target
 
     def run(self) -> PipelineArtifacts:

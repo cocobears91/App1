@@ -1,0 +1,9 @@
+{
+  "data_source": "jsonl",
+  "dataset_format": "jsonl",
+  "claims_dataset_path": "data/sample_claims.jsonl",
+  "labels_dataset_path": null,
+  "training_seed": 123,
+  "training_sample_size": 500,
+  "validation_split": 0.3
+}

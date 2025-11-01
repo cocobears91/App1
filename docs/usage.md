@@ -11,6 +11,17 @@
   - `python scripts/train.py`
 - Override sample size/seed:
   - `python scripts/train.py --samples 10000 --seed 123`
+- Bring your own dataset (JSONL aligned to `Claim` schema):
+  - `python scripts/train.py --config configs/jsonl_training.json`
+  - Example config payload:
+    ```json
+    {
+      "data_source": "jsonl",
+      "claims_dataset_path": "data/sample_claims.jsonl",
+      "training_seed": 123,
+      "validation_split": 0.3
+    }
+    ```
 - Outputs:
   - Model pipeline: `models/xgboost_risk_model.joblib`
   - Metrics JSON: `artifacts/training_metrics.json`
@@ -36,6 +47,13 @@ for result in results:
 
 ### 5. Integrating with Real Data
 - Map incoming claim payloads to the canonical schema (`schema/canonical_claim_schema.yaml`).
-- Populate `Claim` / `ClaimBatch` Pydantic models to leverage the existing pipeline.
+- Produce JSONL exports where each line mirrors a `Claim` structure; optionally include `label` for known denials.
+- Update the config to point at the dataset paths (`claims_dataset_path`, `labels_dataset_path`).
 - Replace synthetic generation in `TrainingPipeline` with ETL loading from secure data stores.
+
+### 6. Containerized Execution
+- Build image: `docker build -t senior-care-validator .`
+- Run training (synthetic): `docker run --rm -v $(pwd)/artifacts:/app/artifacts -v $(pwd)/models:/app/models senior-care-validator`
+- Run with external dataset:
+  - `docker run --rm -v $(pwd):/app -e CONFIG_PATH=configs/jsonl_training.json senior-care-validator python scripts/train.py --config $CONFIG_PATH`
 

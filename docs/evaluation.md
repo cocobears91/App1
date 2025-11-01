@@ -19,6 +19,9 @@
 - **LLM Reasoning (Optional)**:
   - Introduce retrieval index over CMS manuals (FAISS/pgvector) and prompt templating for contextual explanations.
   - Apply guardrails to ensure generative output aligns with deterministic findings.
+- **Ops Tooling**:
+  - Use the provided Docker image for consistent deployments and wire into CI pipelines.
+  - Store JSONL datasets in secure object storage; mount read-only during training jobs.
 
 ### Deployment Readiness Checklist
 - Containerize pipeline (Dockerfile) and configure CI to run `scripts/train.py --samples 2000` smoke test.

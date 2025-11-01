@@ -79,3 +79,54 @@ rules:
       message: "Reported CCM minutes below 20-minute requirement; adjust time tracking or code selection."
       rationale: "Medicare PFS CCM requirements."
 
+  - id: HOSPICE_THERAPY_CONFLICT
+    scope: claim
+    description: >-
+      Beneficiaries under hospice election typically cannot receive intensive rehab billed outside the hospice benefit without clear documentation and hospice coordination.
+    applies_to:
+      facility_type: ["SNF"]
+    conditions:
+      all:
+        - field: "patient.hospice_election"
+          operator: "equals"
+          value: true
+        - field: "metadata.hospice_election_documented"
+          operator: "equals"
+          value: false
+    finding:
+      severity: "high"
+      message: "Therapy billed while hospice election active; confirm hospice coordination and coverage responsibility."
+      rationale: "CMS hospice consolidated billing and coordination of care requirements."
+
+  - id: HOME_HEALTH_VISIT_INTENSITY
+    scope: claim
+    description: >-
+      Excessive visit frequency for home health services may indicate scheduling, coverage, or utilization issues requiring medical review.
+    applies_to:
+      facility_type: ["HomeHealth"]
+    conditions:
+      all:
+        - field: "metadata.visits_per_week"
+          operator: "gt"
+          value: 10
+    finding:
+      severity: "medium"
+      message: "High visit frequency detected; validate medical necessity and plan of care approval."
+      rationale: "HH PPS utilization management best practices."
+
+  - id: DME_PHYSICIAN_ORDER_REQUIRED
+    scope: line
+    description: >-
+      Durable medical equipment billed under Medicare Part A/B requires a signed physician order supporting the supply.
+    applies_to:
+      hcpcs_cpt: ["E0260", "E0261", "E1390"]
+    conditions:
+      all:
+        - field: "metadata.physician_order_present"
+          operator: "equals"
+          value: false
+    finding:
+      severity: "high"
+      message: "Missing physician order documentation for billed DME item."
+      rationale: "CMS DME coverage regulations and documentation standards."
+
